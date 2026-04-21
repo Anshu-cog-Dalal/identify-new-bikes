@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//span[normalize-space()='NEW BIKES']")
     private WebElement newBike;
-    @FindBy(xpath = "//a[@title='Upcoming Bikes']")
+    @FindBy(xpath = "//a[normalize-space()='Upcoming Bikes']")
     private WebElement upComingBike;
 
     @FindBy(xpath = "//span[normalize-space()='MORE']")
@@ -28,12 +28,14 @@ public class HomePage extends BasePage {
 
     public void cilckUpComingBike(){
         Actions ac = new Actions(driver);
-        ac.moveToElement(newBike).moveToElement(upComingBike).click().perform();
+        ac.moveToElement(newBike).perform();
+        upComingBike.click();
     }
 
     public void cilckUsedCar(){
         Actions ac = new Actions(driver);
-        ac.moveToElement(more).moveToElement(usedCar).click().perform();
+        ac.moveToElement(more).perform();
+        usedCar.click();
     }
 
     public void clickLoginIcon(){
