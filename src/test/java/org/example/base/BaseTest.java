@@ -8,11 +8,11 @@ public class BaseTest{
     public void setUp(){
         DriverFactory.initDriver();
         driver = DriverFactory.getDriver();
-        System.out.println("Setup complete — browser is ready!");
+        System.out.println("Setup complete—browser is ready!");
     }
     @AfterClass
     public void tearDown(){
         DriverFactory.quitDriver();
-        System.out.println("Teardown complete — browser is closed!");
+        System.out.println("Teardown complete—browser is closed!");
     }
 }

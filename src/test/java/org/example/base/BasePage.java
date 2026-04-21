@@ -17,7 +17,7 @@ public class BasePage{
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
-    protected void typeText(WebElement element,String text){
+    protected void typeText(WebElement element,String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(text);
