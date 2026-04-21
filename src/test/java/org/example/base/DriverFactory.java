@@ -1,18 +1,28 @@
 package org.example.base;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-public class DriverFactory{
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class DriverFactory {
     public static WebDriver driver;
-    public static void initDriver(){
-        driver = new ChromeDriver();
+
+    public static void initDriver() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.zigwheels.com");
         System.out.println("Browser opened and ZigWheels loaded!");
     }
-    public static WebDriver getDriver() {
 
+    public static WebDriver getDriver() {
         return driver;
     }
+
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
@@ -21,4 +31,3 @@ public class DriverFactory{
         }
     }
 }
-
