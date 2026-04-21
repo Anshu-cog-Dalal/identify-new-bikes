@@ -10,6 +10,7 @@ public class DriverFactory{
         System.out.println("Browser opened and ZigWheels loaded!");
     }
     public static WebDriver getDriver() {
+
         return driver;
     }
     public static void quitDriver() {
