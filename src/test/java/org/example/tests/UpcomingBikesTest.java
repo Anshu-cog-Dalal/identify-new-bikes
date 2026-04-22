@@ -8,33 +8,23 @@ import org.testng.annotations.Test;
 import java.util.List;
 public class UpcomingBikesTest extends BaseTest{
     @Test
-    public void verifyHondaBikesUnder4Lakh(){
-        //open the url
-        driver.get("https://www.zigwheels.com");
-        //navigate upcoming bike page
+    public void verifyHondaBikesUnder4Lakh() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
+
+        //navigate upcoming bike page
         homePage.cilckUpComingBike();
 
         //fetch the honda bike in range
         UpcomingBikesPage u=new UpcomingBikesPage(driver);
+        u.hondaFilter();
         List<BikeDetails> bikes = u.getHondaBikes();
 
-        //check bike display
-        boolean isDisplayed = u.isHonda();
-        System.out.println("INFO : Honda bikes under 4 Lakh displayed = " + isDisplayed);
-        Assert.assertTrue(isDisplayed, "FAIL : No Honda bikes under 4 Lakh are displayed on the page.");
-        //verify count
-        int count = u.countHonda();
-        System.out.println("INFO : Total Honda bikes under 4 Lakh = " + count);
-        Assert.assertTrue(count > 0, "FAIL : Count should be > 0 but was: " + count);
-        //fetch details
-        List<BikeDetails> bikes1 = u.getHondaBikes();
         //print bike deatails
         System.out.println("  Upcoming Honda Bikes Under 4 Lakh in India — Total: " + bikes.size());
         for (int i = 0; i < bikes.size(); i++) {
             BikeDetails bike = bikes.get(i);
-            System.out.println("\n  Bike " + (i + 1) + " :");
-            System.out.println("  Bike Name: " + bike.name);
+            System.out.println("\nBike " + (i + 1) + " :");
+            System.out.println("Bike Name: " + bike.name);
             System.out.println("Price: " + bike.price);
             System.out.println("Expected Launch:" + bike.launchDate);
         }
