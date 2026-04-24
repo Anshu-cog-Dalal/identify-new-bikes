@@ -15,7 +15,7 @@ public class ExcelReader {
         try {
             if (workbook == null) {
                 FileInputStream fis = new FileInputStream(
-                        ConfigReader.getProperty("testdata.excel"));
+                        ConfigReader.get("testdata.excel"));
                 workbook = new XSSFWorkbook(fis);
             }
         } catch (IOException e) {
