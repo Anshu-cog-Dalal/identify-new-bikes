@@ -19,10 +19,10 @@
         </classes>
     </test>
 
-<!--    <test name="Used Cars Test">-->
-<!--        <classes>-->
-<!--            <class name="org.example.tests.UsedCarsTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Used Cars Test">
+        <classes>
+            <class name="org.example.tests.UsedCarsTest"/>
+        </classes>
+    </test>
 
 </suite>
