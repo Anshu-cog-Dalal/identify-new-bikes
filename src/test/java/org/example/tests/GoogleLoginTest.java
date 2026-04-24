@@ -3,6 +3,7 @@ package org.example.tests;
 import org.example.base.BaseTest;
 import org.example.pages.HomePage;
 import org.example.pages.LoginPage;
+import org.example.utils.ExcelReader;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,6 +16,11 @@ public class GoogleLoginTest extends BaseTest {
 
     @Test
     public void testInvalidGoogleLogin() throws InterruptedException {
+
+
+        //changed by me
+        Object[][] loginData =
+                ExcelReader.getSheetData("GoogleLoginTestData");
 
         // Step 1: Click account logo on Home Page
         HomePage homePage = new HomePage(driver);

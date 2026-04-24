@@ -3,6 +3,7 @@ import org.example.base.BaseTest;
 import org.example.pages.HomePage;
 import org.example.pages.UpcomingBikesPage;
 import org.example.pages.UpcomingBikesPage.BikeDetails;
+import org.example.utils.ExcelReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
@@ -13,6 +14,10 @@ public class UpcomingBikesTest extends BaseTest{
 
         //navigate upcoming bike page
         homePage.cilckUpComingBike();
+
+        //changed by me
+        Object[][] bikesData =
+                ExcelReader.getSheetData("UpcomingHondaBikes");
 
         //fetch the honda bike in range
         UpcomingBikesPage u=new UpcomingBikesPage(driver);
