@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ZigWheels Hackathon Suite" parallel="classes" thread-count="3" verbose="1">
+
+    <listeners>
+        <listener class-name="org.example.utils.ExtentReportManager"/>
+    </listeners>
+
+    <test name="Google Login Test">
+        <classes>
+            <class name="org.example.tests.GoogleLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Upcoming Bikes Test">
+        <classes>
+            <class name="org.example.tests.UpcomingBikesTest"/>
+        </classes>
+    </test>
+
+<!--    <test name="Used Cars Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.tests.UsedCarsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
