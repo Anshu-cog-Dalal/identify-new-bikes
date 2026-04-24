@@ -14,14 +14,6 @@ public class ScreenshotUtil {
 
     private static final String SCREENSHOT_DIR = "screenshots/";
 
-    /**
-     * Captures a screenshot and saves it to the screenshots/ folder.
-     * Called from BaseTest @AfterMethod on test failure.
-     *
-     * @param driver   the WebDriver instance for the current thread
-     * @param testName the name of the failed test (used in filename)
-     * @return absolute path of the saved screenshot (attached to ExtentReport)
-     */
     public static String captureScreenshot(WebDriver driver, String testName) {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String fileName  = testName + "_" + timestamp + ".png";
@@ -48,13 +40,7 @@ public class ScreenshotUtil {
         }
     }
 
-    /**
-     * Captures screenshot as Base64 string.
-     * Useful for embedding directly into ExtentReports HTML without a file path.
-     *
-     * @param driver the WebDriver instance
-     * @return Base64-encoded screenshot string
-     */
+
     public static String captureScreenshotAsBase64(WebDriver driver) {
         try {
             return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
