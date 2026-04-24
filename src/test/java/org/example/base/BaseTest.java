@@ -16,11 +16,6 @@ public class BaseTest{
         System.out.println("Setup complete—browser is ready!");
     }
 
-//    @AfterClass
-//    public void tearDown(){
-//        DriverFactory.quitDriver();
-//        System.out.println("Teardown complete—browser is closed!");
-//    }
 
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
@@ -31,14 +26,7 @@ public class BaseTest{
     public void afterSuite() {
         ExtentReportManager.flushReport(); // Writes the HTML report to disk
     }
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(Method method) {
-        DriverFactory.initDriver();
-        driver = DriverFactory.getDriver();
-        driver.get(ConfigReader.get("base.url"));
-        // ← NO startTest() here — listener's onTestStart() handles it
-        System.out.println("Browser ready for: " + method.getName());
-    }
+
 
     @AfterMethod
     public void tearDown(){
