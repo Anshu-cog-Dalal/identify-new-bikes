@@ -1,11 +1,7 @@
 package org.example.base;
-import org.example.utils.ConfigReader;
 import org.example.utils.ExtentReportManager;
-import org.example.utils.ScreenshotUtil;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
-import java.lang.reflect.Method;
 
 public class BaseTest{
     protected WebDriver driver;
