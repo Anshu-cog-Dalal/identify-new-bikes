@@ -24,10 +24,7 @@ public class ConfigReader {
         }
     }
 
-    /**
-     * Returns value for a given key from config.properties.
-     * Throws clear error if key is missing — avoids silent nulls.
-     */
+
     public static String get(String key) {
         String value = properties.getProperty(key);
         if (value == null || value.trim().isEmpty()) {
@@ -36,25 +33,18 @@ public class ConfigReader {
         return value.trim();
     }
 
-    /**
-     * Returns value or a default if key is missing.
-     * Use for optional config keys.
-     */
+
     public static String get(String key, String defaultValue) {
         String value = properties.getProperty(key);
         return (value == null || value.trim().isEmpty()) ? defaultValue : value.trim();
     }
 
-    /**
-     * Returns int value — used for timeout configs like implicitWait, explicitWait.
-     */
+
     public static int getInt(String key) {
         return Integer.parseInt(get(key));
     }
 
-    /**
-     * Returns boolean value — used for headless, incognito flags.
-     */
+
     public static boolean getBoolean(String key) {
         return Boolean.parseBoolean(get(key));
     }
