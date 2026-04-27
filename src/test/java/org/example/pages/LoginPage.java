@@ -11,35 +11,39 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    // Google button in the popup
     @FindBy(xpath = "//div[@class='lgn-sc c-p txt-l pl-30 pr-30 googleSignIn']")
     private WebElement googleButton;
 
-    // Email field in Google Sign-In window
-    @FindBy(xpath="//input[@id='identifierId']")
+    @FindBy(xpath = "//input[@id='identifierId']")
     private WebElement emailField;
 
-    // Next button
     @FindBy(xpath = "//span[normalize-space()='Next']")
     private WebElement nextButton;
 
-    // Error message
     @FindBy(xpath = "//div[@class='Ekjuhf Jj6Lae']")
     private WebElement errorMessage;
 
-    public void clickGoogleButton(){
+    public void clickGoogleButton() {
         clickElement(googleButton);
     }
 
-    public void enterEmail(String email){
+    public void enterEmail(String email) {
         typeText(emailField, email);
     }
 
-    public void clickNext(){
+    public void clickNext() {
         clickElement(nextButton);
     }
 
-    public String getErrorMessage(){
+    public String getErrorMessage() {
         return getElementText(errorMessage);
+    }
+
+    public WebElement getEmailField() {
+        return emailField;
+    }
+
+    public WebElement getErrorElement() {
+        return errorMessage;
     }
 }
