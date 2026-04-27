@@ -1,0 +1,10 @@
+<suite name ="test">
+    <test name="process test">
+        <classes>
+            <class name="org.example.tests.GoogleLoginTest"/>
+            <class name="org.example.tests.UpcomingBikesTest"/>
+            
+        </classes>
+        
+    </test>
+</suite>

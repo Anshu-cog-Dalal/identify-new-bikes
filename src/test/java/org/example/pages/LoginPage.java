@@ -27,19 +27,19 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//div[@class='Ekjuhf Jj6Lae']")
     private WebElement errorMessage;
 
-    public void clickGoogleButton() {
+    public void clickGoogleButton(){
         clickElement(googleButton);
     }
 
-    public void enterEmail(String email) {
+    public void enterEmail(String email){
         typeText(emailField, email);
     }
 
-    public void clickNext() {
+    public void clickNext(){
         clickElement(nextButton);
     }
 
-    public String getErrorMessage() {
+    public String getErrorMessage(){
         return getElementText(errorMessage);
     }
 }
