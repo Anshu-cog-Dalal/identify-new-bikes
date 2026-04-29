@@ -3,9 +3,6 @@
 
 <suite name="ZigWheels Hackathon Suite" parallel="classes" thread-count="3" verbose="1">
 
-    <listeners>
-        <listener class-name="org.example.utils.ExtentReportManager"/>
-    </listeners>
 
     <test name="Google Login Test">
         <classes>

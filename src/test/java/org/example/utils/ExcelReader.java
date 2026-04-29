@@ -67,4 +67,12 @@ public class ExcelReader {
                 return "";
         }
     }
+
+    public static String getEmail(int row){
+        loadExcel();
+        Sheet sheet = workbook.getSheet("GoogleLoginTestData");
+        String email = sheet.getRow(row).getCell(2).getStringCellValue();
+        return email;
+    }
+
 }

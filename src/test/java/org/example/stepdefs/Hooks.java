@@ -33,17 +33,6 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
-            try {
-                ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
-
-                if (windows.size() > 1) {
-                    driver.switchTo().window(windows.get(1));
-                } else {
-                    driver.switchTo().window(windows.get(0));
-                }
-            } catch (Exception e) {
-                System.out.println("Could not switch window: " + e.getMessage());
-            }
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Failure Screenshot");
             System.out.println("Screenshot captured: " + scenario.getName());

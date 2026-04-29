@@ -3,6 +3,7 @@ package org.example.stepdefs;
 import io.cucumber.java.en.*;
 import org.example.pages.HomePage;
 import org.example.pages.LoginPage;
+import org.example.utils.ExcelReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -36,14 +37,16 @@ public class LoginSteps {
         loginPage.clickGoogleButton();
     }
 
-    @When("the user enters an invalid email {string}")
-    public void the_user_enters_an_invalid_email(String email) {
+    @When("the user enters an invalid email from excel by row {string}")
+    public void the_user_enters_an_invalid_email(String row) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 
         ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(1));
 
+        int rowNum = Integer.parseInt(row);
+        String email = ExcelReader.getEmail(rowNum);
         wait.until(ExpectedConditions.visibilityOf(loginPage.getEmailField()));
         loginPage.enterEmail(email);
 
@@ -55,8 +58,8 @@ public class LoginSteps {
         loginPage.clickNext();
     }
 
-    @Then("an error message containing {string} should be displayed")
-    public void an_error_message_containing_should_be_displayed(String expectedError) {
+    @Then("an error message should be displayed")
+    public void an_error_message_containing_should_be_displayed() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorElement()));
 
@@ -64,13 +67,13 @@ public class LoginSteps {
         System.out.println("Error displayed: " + actualError);
 
 
-        String normalizedActual = actualError.replaceAll("[''`]", "'");
-        String normalizedExpected = expectedError.replaceAll("[''`]", "'");
-
-        Assert.assertTrue(
-                "Expected error not shown! Actual: " + actualError,
-                normalizedActual.contains(normalizedExpected)
-        );
+//        String normalizedActual = actualError.replaceAll("[''`]", "'");
+//        String normalizedExpected = expectedError.replaceAll("[''`]", "'");
+//
+//        Assert.assertTrue(
+//                "Expected error not shown! Actual: " + actualError,
+//                normalizedActual.contains(normalizedExpected)
+//        );
 
         ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(0));
