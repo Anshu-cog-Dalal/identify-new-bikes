@@ -1,9 +1,9 @@
 package org.example.base;
 
+import org.example.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 
 public class DriverFactory {
     public static WebDriver driver;
@@ -16,7 +16,7 @@ public class DriverFactory {
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.get("https://www.zigwheels.com");
+        driver.get(ConfigReader.get("base.url"));
         System.out.println("Browser opened and ZigWheels loaded!");
     }
 

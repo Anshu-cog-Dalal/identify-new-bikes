@@ -67,14 +67,6 @@ public class LoginSteps {
         System.out.println("Error displayed: " + actualError);
 
 
-//        String normalizedActual = actualError.replaceAll("[''`]", "'");
-//        String normalizedExpected = expectedError.replaceAll("[''`]", "'");
-//
-//        Assert.assertTrue(
-//                "Expected error not shown! Actual: " + actualError,
-//                normalizedActual.contains(normalizedExpected)
-//        );
-
         ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(0));
     }

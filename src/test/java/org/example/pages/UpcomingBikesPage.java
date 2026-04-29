@@ -1,5 +1,6 @@
 package org.example.pages;
 import org.example.base.BasePage;
+import org.example.utils.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -62,7 +63,7 @@ public class UpcomingBikesPage extends BasePage {
                     String bikeName=card.findElement(BikeName).getText().trim();
                     String bikePrice=card.getAttribute("data-price");
                     String launchDate=card.findElement(BikelaunchDate).getText().trim();
-                    if (Integer.parseInt(bikePrice) < 400000 && Integer.parseInt(bikePrice)!=0){
+                    if (Integer.parseInt(bikePrice) < Integer.parseInt(ConfigReader.get("bike.max.price")) && Integer.parseInt(bikePrice)!=0){
                         result.add(new BikeDetails(bikeName,bikePrice,launchDate));
                     }
                 } catch (Exception e) {
