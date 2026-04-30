@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 29, 2026 03:41:07 pm</span></a>
+<a href="#"><span class="badge badge-primary">Apr 30, 2026 11:34:51 PM</span></a>
 </li>
 </ul>
 </div>
@@ -87,7 +87,7 @@
           <div class="test-detail">
             <p class="name">Google Login Validation</p>
             <p class="text-sm">
-              <span>3:41:08 pm</span> / <span>00:02:04:404</span>
+              <span>11:34:52 PM</span> / <span>00:02:19:140</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -96,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Google Login Validation</h5>
-<span class='badge badge-success'>04.29.2026 3:41:08 pm</span>
-<span class='badge badge-danger'>04.29.2026 3:43:12 pm</span>
-<span class='badge badge-default'>00:02:04:404</span>
+<span class='badge badge-success'>04.30.2026 11:34:52 PM</span>
+<span class='badge badge-danger'>04.30.2026 11:37:11 PM</span>
+<span class='badge badge-default'>00:02:19:140</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -121,13 +121,10 @@
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -143,70 +140,19 @@
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And the user enters an invalid email from excel by row "1"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //inpu[@id='identifierId']'
-(tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:50)
-	at ✽.the user enters an invalid email from excel by row "1"(file:///C:/Users/2479749/IdeaProjects/identify-new-bikes/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='identifierId']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5b7b1f8c115a16ca84ed78a18d3af724, findElement {using=xpath, value=//inpu[@id='identifierId']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479749\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50961}, goog:processID: 10256, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50961/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b7b1f8c115a16ca84ed78a18d3af724
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 2 more
-</textarea>
-      
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>org.example.stepdefs.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
-      <div>Failure Screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
-  
-    
-
-    </div></div>
-</div>
+                    <span>And the user clicks Next</span>
       <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>And the user clicks Next</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>Then an error message should be displayed</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
               </div>
@@ -214,13 +160,10 @@ Session ID: 5b7b1f8c115a16ca84ed78a18d3af724
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="18"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -236,70 +179,19 @@ Session ID: 5b7b1f8c115a16ca84ed78a18d3af724
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And the user enters an invalid email from excel by row "2"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //inpu[@id='identifierId']'
-(tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:50)
-	at ✽.the user enters an invalid email from excel by row "2"(file:///C:/Users/2479749/IdeaProjects/identify-new-bikes/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='identifierId']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f2670cf57bd5d4d9e722c69d853efdd, findElement {using=xpath, value=//inpu[@id='identifierId']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479749\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56707}, goog:processID: 29952, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56707/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f2670cf57bd5d4d9e722c69d853efdd
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 2 more
-</textarea>
-      
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>org.example.stepdefs.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
-      <div>Failure Screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded2.png' src="test-output/embedded2.png">
-  
-    
-
-    </div></div>
-</div>
+                    <span>And the user clicks Next</span>
       <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>And the user clicks Next</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>Then an error message should be displayed</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
               </div>
@@ -307,13 +199,10 @@ Session ID: 6f2670cf57bd5d4d9e722c69d853efdd
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+                  <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -329,70 +218,19 @@ Session ID: 6f2670cf57bd5d4d9e722c69d853efdd
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And the user enters an invalid email from excel by row "3"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //inpu[@id='identifierId']'
-(tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:50)
-	at ✽.the user enters an invalid email from excel by row "3"(file:///C:/Users/2479749/IdeaProjects/identify-new-bikes/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='identifierId']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f190d67e420da118311f74ea3b665159, findElement {using=xpath, value=//inpu[@id='identifierId']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479749\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60473}, goog:processID: 4356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60473/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f190d67e420da118311f74ea3b665159
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 2 more
-</textarea>
-      
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>org.example.stepdefs.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
-      <div>Failure Screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded3.png' src="test-output/embedded3.png">
-  
-    
-
-    </div></div>
-</div>
+                    <span>And the user clicks Next</span>
       <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>And the user clicks Next</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>Then an error message should be displayed</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
               </div>
@@ -417,48 +255,22 @@ Session ID: f190d67e420da118311f74ea3b665159
       <div>
       </div>
                   </div>
-                  <div class="step pass-bg">
+                  <div class="step fail-bg">
                     <span>And the user clicks the Google sign-in button</span>
       <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>And the user enters an invalid email from excel by row "4"</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //inpu[@id='identifierId']'
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='lgn-sc c-p txt-l pl-30 pr-30 googleSignIn']"}.
 (tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:50)
-	at ✽.the user enters an invalid email from excel by row "4"(file:///C:/Users/2479749/IdeaProjects/identify-new-bikes/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='identifierId']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.41.0', revision: '9fc754f'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e552c7cfb47d816b945e34ac7bcf094, findElement {using=xpath, value=//inpu[@id='identifierId']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479749\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63141}, goog:processID: 16304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63141/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e552c7cfb47d816b945e34ac7bcf094
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 2 more
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479371\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57921}, goog:processID: 17056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57921/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aef7046309df844e9de20793c99b251c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.example.base.BasePage.clickElement(BasePage.java:17)
+	at org.example.pages.LoginPage.clickGoogleButton(LoginPage.java:31)
+	at org.example.stepdefs.LoginSteps.the_user_clicks_the_google_sign_in_button(LoginSteps.java:33)
+	at ✽.the user clicks the Google sign-in button(file:///C:/Users/2479371/IdeaProjects/identify-new-bikes/features/Login.feature:6)
 </textarea>
       
       </div>
@@ -469,13 +281,18 @@ Session ID: 0e552c7cfb47d816b945e34ac7bcf094
           <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='test-output/embedded4.png' src="test-output/embedded4.png">
+<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
   
     
 
     </div></div>
 </div>
       <div>
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user enters an invalid email from excel by row "4"</span>
+      <div>Step skipped
       </div>
                   </div>
                   <div class="step skip-bg">
@@ -493,13 +310,10 @@ Session ID: 0e552c7cfb47d816b945e34ac7bcf094
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="63"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+                  <div class="node" id="63"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -515,70 +329,19 @@ Session ID: 0e552c7cfb47d816b945e34ac7bcf094
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And the user enters an invalid email from excel by row "5"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //inpu[@id='identifierId']'
-(tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:50)
-	at ✽.the user enters an invalid email from excel by row "5"(file:///C:/Users/2479749/IdeaProjects/identify-new-bikes/features/Login.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='identifierId']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05481002ead00fe2793fd19b5f36447c, findElement {using=xpath, value=//inpu[@id='identifierId']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479749\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50167}, goog:processID: 22272, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50167/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05481002ead00fe2793fd19b5f36447c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 2 more
-</textarea>
-      
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>org.example.stepdefs.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
-      <div>Failure Screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded5.png' src="test-output/embedded5.png">
-  
-    
-
-    </div></div>
-</div>
+                    <span>And the user clicks Next</span>
       <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>And the user clicks Next</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>Then an error message should be displayed</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
               </div>
@@ -595,7 +358,7 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
           <div class="test-detail">
             <p class="name">Verify Upcoming Honda Bikes under 4 Lakh</p>
             <p class="text-sm">
-              <span>3:43:12 pm</span> / <span>00:00:15:882</span>
+              <span>11:37:11 PM</span> / <span>00:00:21:349</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -604,9 +367,9 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Verify Upcoming Honda Bikes under 4 Lakh</h5>
-<span class='badge badge-success'>04.29.2026 3:43:12 pm</span>
-<span class='badge badge-danger'>04.29.2026 3:43:28 pm</span>
-<span class='badge badge-default'>00:00:15:882</span>
+<span class='badge badge-success'>04.30.2026 11:37:11 PM</span>
+<span class='badge badge-danger'>04.30.2026 11:37:33 PM</span>
+<span class='badge badge-default'>00:00:21:349</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=78</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -672,7 +435,7 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
           <div class="test-detail">
             <p class="name">Verify Popular Used Cars</p>
             <p class="text-sm">
-              <span>3:43:28 pm</span> / <span>00:00:11:100</span>
+              <span>11:37:33 PM</span> / <span>00:00:17:634</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -681,9 +444,9 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Verify Popular Used Cars</h5>
-<span class='badge badge-success'>04.29.2026 3:43:28 pm</span>
-<span class='badge badge-danger'>04.29.2026 3:43:39 pm</span>
-<span class='badge badge-default'>00:00:11:100</span>
+<span class='badge badge-success'>04.30.2026 11:37:33 PM</span>
+<span class='badge badge-danger'>04.30.2026 11:37:50 PM</span>
+<span class='badge badge-default'>00:00:17:634</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=96</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -747,15 +510,15 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>5</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">org.openqa.selenium.TimeoutException</p>
-<p class="duration text-sm">5 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>org.openqa.selenium.TimeoutException</h4>
-<span status="fail" class='badge log badge-danger'>5 failed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -768,51 +531,11 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>15:41:23 pm</td>
+<td>23:36:32 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='11'>And the user enters an invalid email from excel by row "1"</a>
+<a href="#" class="linked" test-id='1' id='54'>And the user clicks the Google sign-in button</a>
 <div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "1"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>15:41:48 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='26'>And the user enters an invalid email from excel by row "2"</a>
-<div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "2"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>15:42:12 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='41'>And the user enters an invalid email from excel by row "3"</a>
-<div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "3"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>15:42:33 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='56'>And the user enters an invalid email from excel by row "4"</a>
-<div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "4"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>15:42:55 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='71'>And the user enters an invalid email from excel by row "5"</a>
-<div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "5"</span>
+<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user clicks the Google sign-in button</span>
 </div>
 </td>
 </tr>
@@ -833,13 +556,13 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 29, 2026 03:41:07 pm</h3>
+<h3>Apr 30, 2026 11:34:51 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 29, 2026 03:43:39 pm</h3>
+<h3>Apr 30, 2026 11:37:50 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -890,9 +613,9 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='28%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='85%'><b>6</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='71%'><b>5</b> scenarios failed,
+<small data-tooltip='14%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -910,10 +633,10 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='67%'><b>31</b> steps passed</small></div>
+<div><small data-tooltip='90%'><b>38</b> steps passed</small></div>
 <div>
-<small data-tooltip='10%'><b>5</b> steps failed,
-<b>10</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='2%'><b>1</b> steps failed,
+<b>3</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -929,7 +652,7 @@ Session ID: 05481002ead00fe2793fd19b5f36447c
 </div></div>
 <script>
 var timeline = {
-"Google Login Validation":124.404,"Verify Upcoming Honda Bikes under 4 Lakh":15.882,"Verify Popular Used Cars":11.1
+"Google Login Validation":139.14,"Verify Upcoming Honda Bikes under 4 Lakh":21.349,"Verify Popular Used Cars":17.634
 };
 </script>
 <div class="row">
@@ -943,16 +666,16 @@ failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
-failChild: 5,
+passChild: 6,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 31,
-failGrandChild: 5,
+passGrandChild: 38,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 10,
+skipGrandChild: 3,
 infoGrandChild: 0,
 eventsCount: 5,
 };

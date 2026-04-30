@@ -1,5 +1,4 @@
 package org.example.stepdefs;
-
 import io.cucumber.java.en.*;
 import org.example.pages.HomePage;
 import org.example.pages.LoginPage;
@@ -7,13 +6,10 @@ import org.example.utils.ExcelReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.Assert;
-
 import java.time.Duration;
 import java.util.ArrayList;
 
 public class LoginSteps {
-
     private WebDriver driver;
     private LoginPage loginPage;
     private HomePage homePage;
@@ -31,26 +27,23 @@ public class LoginSteps {
     }
 
     @When("the user clicks the Google sign-in button")
-    public void the_user_clicks_the_google_sign_in_button() throws InterruptedException {
-        loginPage = new LoginPage(driver);
+    public void the_user_clicks_the_google_sign_in_button() throws InterruptedException{
+        loginPage=new LoginPage(driver);
         Thread.sleep(2000);
         loginPage.clickGoogleButton();
     }
 
     @When("the user enters an invalid email from excel by row {string}")
     public void the_user_enters_an_invalid_email(String row) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-
-        ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
+        ArrayList<String> windows=new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(1));
-
-        int rowNum = Integer.parseInt(row);
-        String email = ExcelReader.getEmail(rowNum);
+        int rowNum=Integer.parseInt(row);
+        String email=ExcelReader.getEmail(rowNum);
         wait.until(ExpectedConditions.visibilityOf(loginPage.getEmailField()));
         loginPage.enterEmail(email);
-
-        System.out.println("Entered invalid email: " + email);
+        System.out.println("Entered invalid email: "+email);
     }
 
     @When("the user clicks Next")
@@ -60,14 +53,11 @@ public class LoginSteps {
 
     @Then("an error message should be displayed")
     public void an_error_message_containing_should_be_displayed() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorElement()));
-
-        String actualError = loginPage.getErrorMessage();
-        System.out.println("Error displayed: " + actualError);
-
-
-        ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
+        String actualError=loginPage.getErrorMessage();
+        System.out.println("Error displayed: "+actualError);
+        ArrayList<String> windows=new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(0));
     }
 }

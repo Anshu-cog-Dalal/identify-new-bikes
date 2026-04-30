@@ -7,15 +7,15 @@ public class BaseTest{
     @BeforeClass
     public void setUp(){
         DriverFactory.initDriver();
-        driver = DriverFactory.getDriver();
-        System.out.println("Setup complete—browser is ready!");
+        //driver set up
+        driver=DriverFactory.getDriver();
+        System.out.println("Setup complete,browser is ready!");
     }
-
-
+    //For closing the Browser
     @AfterMethod
     public void tearDown(){
         DriverFactory.quitDriver();
-        System.out.println("Teardown complete—browser is closed!");
+        System.out.println("Teardown complete,browser is closed!");
     }
 
 }
