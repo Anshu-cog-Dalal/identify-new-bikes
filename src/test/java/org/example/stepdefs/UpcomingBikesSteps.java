@@ -1,4 +1,5 @@
 package org.example.stepdefs;
+import org.example.Hook.Hooks;
 import org.example.pages.HomePage;
 import org.example.pages.UpcomingBikesPage;
 import org.example.pages.UpcomingBikesPage.BikeDetails;
@@ -18,7 +19,7 @@ public class UpcomingBikesSteps {
 
     @Given("the user is on the Home page")
     public void the_user_is_on_the_home_page() {
-        this.driver=Hooks.driver;
+        this.driver= Hooks.driver;
         homePage=new HomePage(driver);
     }
 

@@ -1,4 +1,5 @@
 package org.example.stepdefs;
+import org.example.Hook.Hooks;
 import org.example.pages.HomePage;
 import org.example.pages.UsedCarsPage;
 import io.cucumber.java.en.Given;
@@ -14,7 +15,7 @@ public class UsedCarsSteps {
 
     @Given("the user is on Home page")
     public void the_user_is_on_home_page() {
-        this.driver=Hooks.driver;
+        this.driver= Hooks.driver;
         homePage=new HomePage(driver);
     }
 
