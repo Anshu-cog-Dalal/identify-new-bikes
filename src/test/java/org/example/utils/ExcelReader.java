@@ -22,7 +22,6 @@ public class ExcelReader {
         }
     }
 
-
     public static String getEmail(int row){
         loadExcel();
         Sheet sheet = workbook.getSheet("GoogleLoginTestData");
