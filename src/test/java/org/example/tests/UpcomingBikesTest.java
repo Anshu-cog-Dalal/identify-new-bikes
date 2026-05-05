@@ -15,9 +15,6 @@ public class UpcomingBikesTest extends BaseTest{
         //navigate upcoming bike page
         homePage.cilckUpComingBike();
 
-        //changed by me
-        Object[][] bikesData =
-                ExcelReader.getSheetData("UpcomingHondaBikes");
 
         //fetch the honda bike in range
         UpcomingBikesPage u=new UpcomingBikesPage(driver);

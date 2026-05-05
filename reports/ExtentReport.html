@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 30, 2026 11:34:51 PM</span></a>
+<a href="#"><span class="badge badge-primary">May 5, 2026 10:58:08 am</span></a>
 </li>
 </ul>
 </div>
@@ -87,7 +87,7 @@
           <div class="test-detail">
             <p class="name">Google Login Validation</p>
             <p class="text-sm">
-              <span>11:34:52 PM</span> / <span>00:02:19:140</span>
+              <span>10:58:09 am</span> / <span>00:01:36:370</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -96,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Google Login Validation</h5>
-<span class='badge badge-success'>04.30.2026 11:34:52 PM</span>
-<span class='badge badge-danger'>04.30.2026 11:37:11 PM</span>
-<span class='badge badge-default'>00:02:19:140</span>
+<span class='badge badge-success'>05.05.2026 10:58:09 am</span>
+<span class='badge badge-danger'>05.05.2026 10:59:45 am</span>
+<span class='badge badge-default'>00:01:36:370</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -160,10 +160,13 @@
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
+                  <div class="node" id="18"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
                 </div>
               </div>
-              <div class="card-body mt-3 collapse">
+              <div class="card-body mt-3 ">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -179,19 +182,47 @@
       <div>
       </div>
                   </div>
-                  <div class="step pass-bg">
+                  <div class="step fail-bg">
                     <span>And the user enters an invalid email from excel by row "2"</span>
       <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2, but was: 1
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2480341\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65205}, goog:processID: 12436, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65205/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4fa04ea36c4f0ecd25d6fdec4099786
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.example.stepdefs.LoginSteps.the_user_enters_an_invalid_email(LoginSteps.java:40)
+	at ✽.the user enters an invalid email from excel by row "2"(file:///C:/Users/2480341/IdeaProjects/identify-new-bikes/features/Login.feature:7)
+</textarea>
+      
       </div>
                   </div>
                   <div class="step pass-bg">
+                    <span>org.example.Hook.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
+      <div>Failure Screenshot
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step skip-bg">
                     <span>And the user clicks Next</span>
-      <div>
+      <div>Step skipped
       </div>
                   </div>
-                  <div class="step pass-bg">
+                  <div class="step skip-bg">
                     <span>Then an error message should be displayed</span>
-      <div>
+      <div>Step skipped
       </div>
                   </div>
               </div>
@@ -238,13 +269,10 @@
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="48"><span class="badge log fail-bg mr-2">Fail</span>Show error for invalid Google account email</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+                  <div class="node" id="48"><span class="badge log pass-bg mr-2">Pass</span>Show error for invalid Google account email</div>
                 </div>
               </div>
-              <div class="card-body mt-3 ">
+              <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
                     <span>Given the user is on the home page</span>
       <div>
@@ -255,54 +283,24 @@
       <div>
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>And the user clicks the Google sign-in button</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='lgn-sc c-p txt-l pl-30 pr-30 googleSignIn']"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2479371\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57921}, goog:processID: 17056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57921/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: aef7046309df844e9de20793c99b251c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.example.base.BasePage.clickElement(BasePage.java:17)
-	at org.example.pages.LoginPage.clickGoogleButton(LoginPage.java:31)
-	at org.example.stepdefs.LoginSteps.the_user_clicks_the_google_sign_in_button(LoginSteps.java:33)
-	at ✽.the user clicks the Google sign-in button(file:///C:/Users/2479371/IdeaProjects/identify-new-bikes/features/Login.feature:6)
-</textarea>
-      
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>org.example.stepdefs.Hooks.addScreenShot(io.cucumber.java.Scenario)</span>
-      <div>Failure Screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
-  
-    
-
-    </div></div>
-</div>
+                    <span>And the user enters an invalid email from excel by row "4"</span>
       <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
-                    <span>And the user enters an invalid email from excel by row "4"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>And the user clicks Next</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
-                  <div class="step skip-bg">
+                  <div class="step pass-bg">
                     <span>Then an error message should be displayed</span>
-      <div>Step skipped
+      <div>
       </div>
                   </div>
               </div>
@@ -358,7 +356,7 @@ Session ID: aef7046309df844e9de20793c99b251c
           <div class="test-detail">
             <p class="name">Verify Upcoming Honda Bikes under 4 Lakh</p>
             <p class="text-sm">
-              <span>11:37:11 PM</span> / <span>00:00:21:349</span>
+              <span>10:59:45 am</span> / <span>00:00:15:386</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -367,9 +365,9 @@ Session ID: aef7046309df844e9de20793c99b251c
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Verify Upcoming Honda Bikes under 4 Lakh</h5>
-<span class='badge badge-success'>04.30.2026 11:37:11 PM</span>
-<span class='badge badge-danger'>04.30.2026 11:37:33 PM</span>
-<span class='badge badge-default'>00:00:21:349</span>
+<span class='badge badge-success'>05.05.2026 10:59:45 am</span>
+<span class='badge badge-danger'>05.05.2026 11:00:01 am</span>
+<span class='badge badge-default'>00:00:15:386</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=78</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -435,7 +433,7 @@ Session ID: aef7046309df844e9de20793c99b251c
           <div class="test-detail">
             <p class="name">Verify Popular Used Cars</p>
             <p class="text-sm">
-              <span>11:37:33 PM</span> / <span>00:00:17:634</span>
+              <span>11:00:01 am</span> / <span>00:00:12:395</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -444,9 +442,9 @@ Session ID: aef7046309df844e9de20793c99b251c
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Verify Popular Used Cars</h5>
-<span class='badge badge-success'>04.30.2026 11:37:33 PM</span>
-<span class='badge badge-danger'>04.30.2026 11:37:50 PM</span>
-<span class='badge badge-default'>00:00:17:634</span>
+<span class='badge badge-success'>05.05.2026 11:00:01 am</span>
+<span class='badge badge-danger'>05.05.2026 11:00:13 am</span>
+<span class='badge badge-default'>00:00:12:395</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=96</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -531,11 +529,11 @@ Session ID: aef7046309df844e9de20793c99b251c
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>23:36:32 PM</td>
+<td>10:58:34 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='54'>And the user clicks the Google sign-in button</a>
+<a href="#" class="linked" test-id='1' id='26'>And the user enters an invalid email from excel by row "2"</a>
 <div class="">
-<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user clicks the Google sign-in button</span>
+<span class="badge badge-default">Google Login Validation.Show error for invalid Google account email.And the user enters an invalid email from excel by row "2"</span>
 </div>
 </td>
 </tr>
@@ -556,13 +554,13 @@ Session ID: aef7046309df844e9de20793c99b251c
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 30, 2026 11:34:51 PM</h3>
+<h3>May 5, 2026 10:58:08 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 30, 2026 11:37:50 PM</h3>
+<h3>May 5, 2026 11:00:13 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -633,10 +631,10 @@ Session ID: aef7046309df844e9de20793c99b251c
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='90%'><b>38</b> steps passed</small></div>
+<div><small data-tooltip='92%'><b>39</b> steps passed</small></div>
 <div>
 <small data-tooltip='2%'><b>1</b> steps failed,
-<b>3</b> skipped, <b data-tooltip='%'>0</b> others
+<b>2</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -652,7 +650,7 @@ Session ID: aef7046309df844e9de20793c99b251c
 </div></div>
 <script>
 var timeline = {
-"Google Login Validation":139.14,"Verify Upcoming Honda Bikes under 4 Lakh":21.349,"Verify Popular Used Cars":17.634
+"Google Login Validation":96.37,"Verify Upcoming Honda Bikes under 4 Lakh":15.386,"Verify Popular Used Cars":12.395
 };
 </script>
 <div class="row">
@@ -672,10 +670,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 38,
+passGrandChild: 39,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 3,
+skipGrandChild: 2,
 infoGrandChild: 0,
 eventsCount: 5,
 };

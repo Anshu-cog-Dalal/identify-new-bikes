@@ -18,9 +18,6 @@ public class GoogleLoginTest extends BaseTest {
     public void testInvalidGoogleLogin() throws InterruptedException {
 
 
-        //changed by me
-        Object[][] loginData =
-                ExcelReader.getSheetData("GoogleLoginTestData");
 
         // Step 1: Click account logo on Home Page
         HomePage homePage = new HomePage(driver);
