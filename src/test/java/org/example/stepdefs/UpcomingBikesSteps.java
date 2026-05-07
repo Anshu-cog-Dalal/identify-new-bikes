@@ -1,5 +1,6 @@
 package org.example.stepdefs;
 import org.example.Hook.Hooks;
+import org.example.base.BasePage;
 import org.example.pages.HomePage;
 import org.example.pages.UpcomingBikesPage;
 import org.example.pages.UpcomingBikesPage.BikeDetails;
@@ -19,24 +20,28 @@ public class UpcomingBikesSteps {
 
     @Given("the user is on the Home page")
     public void the_user_is_on_the_home_page() {
+        BasePage.getLogger().info("the user is on the Home page");
         this.driver= Hooks.driver;
         homePage=new HomePage(driver);
     }
 
     @When("the user navigates to the Upcoming Bikes page")
     public void the_user_navigates_to_the_upcoming_bikes_page() {
+        BasePage.getLogger().info("the user navigates to the Upcoming Bikes page");
         homePage.cilckUpComingBike();
         upcomingBikesPage=new UpcomingBikesPage(driver);
     }
 
     @When("the user applies the Honda brand filter")
     public void the_user_applies_the_honda_brand_filter() throws InterruptedException{
+        BasePage.getLogger().info("the user applies the Honda brand filter");
         upcomingBikesPage.hondaFilter();
 
     }
 
     @Then("the user should see a list of upcoming Honda bikes under 4 lakh")
     public void the_user_should_see_a_list_of_upcoming_honda_bikes_under_4_lakh() {
+        BasePage.getLogger().info("the user should see a list of upcoming Honda bikes under 4 lakh");
         bikes = upcomingBikesPage.getHondaBikes();
         Assert.assertTrue(bikes.size()>0,
                 "FAIL : No Honda bikes found under 4 lakh.");
@@ -52,6 +57,7 @@ public class UpcomingBikesSteps {
 
     @Then("each bike should have a non empty name")
     public void each_bike_should_have_a_non_empty_name() {
+        BasePage.getLogger().info("each bike should have a non empty name");
         for(BikeDetails bike:bikes){
             Assert.assertFalse(bike.name.isEmpty(),
                     "FAIL : Bike name should not be empty.");
@@ -60,6 +66,7 @@ public class UpcomingBikesSteps {
 
     @Then("each bike should have a non empty price")
     public void each_bike_should_have_a_non_empty_price() {
+        BasePage.getLogger().info("each bike should have a non empty price");
         for(BikeDetails bike:bikes){
             Assert.assertFalse(bike.price.isEmpty(),
                     "FAIL : Bike price should not be empty for: "+bike.name);
@@ -68,6 +75,7 @@ public class UpcomingBikesSteps {
 
     @Then("each bike should have a non empty expected launch date")
     public void each_bike_should_have_a_non_empty_expected_launch_date() {
+        BasePage.getLogger().info("each bike should have a non empty expected launch date");
         for(BikeDetails bike:bikes){
             Assert.assertFalse(bike.launchDate.isEmpty(),
                     "FAIL : Launch date should not be empty for: "+bike.name);
