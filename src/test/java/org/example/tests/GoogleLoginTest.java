@@ -19,16 +19,16 @@ public class GoogleLoginTest extends BaseTest {
 
 
 
-        // Step 1: Click account logo on Home Page
+        // Click account logo on Home Page
         HomePage homePage = new HomePage(driver);
         homePage.clickLoginIcon();
         Thread.sleep(2000); // wait for popup
 
-        // Step 2: Click Google button in popup
+        // Click Google button in popup
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickGoogleButton();
 
-        // Step 3: Switch to new Google window
+        // Switch to new Google window
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 
@@ -40,15 +40,15 @@ public class GoogleLoginTest extends BaseTest {
         loginPage.clickNext();
         Thread.sleep(2000); // wait for error message
 
-        // Step 5: Capture and print error message
+        // Capture and print error message
         String error = loginPage.getErrorMessage();
         System.out.println("Error Message Displayed: " + error);
 
-        // Step 6: Assert error message
+        // Assert error message
         Assert.assertTrue(error.contains("find your Google Account"),
                 "Error message not displayed!");
 
-        // Step 7: Switch back to main window
+        // Switch back to main window
         driver.switchTo().window(windows.get(0));
     }
 }

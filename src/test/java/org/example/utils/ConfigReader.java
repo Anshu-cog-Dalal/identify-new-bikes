@@ -32,19 +32,4 @@ public class ConfigReader {
         return value.trim();
     }
 
-
-    public static String get(String key, String defaultValue) {
-        String value = properties.getProperty(key);
-        return (value == null || value.trim().isEmpty()) ? defaultValue : value.trim();
-    }
-
-
-    public static int getInt(String key) {
-        return Integer.parseInt(get(key));
-    }
-
-
-    public static boolean getBoolean(String key) {
-        return Boolean.parseBoolean(get(key));
-    }
 }
